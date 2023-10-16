@@ -19,9 +19,9 @@ void ft_show_tab(struct s_stock_str *par)
 	i = 0;
 	while (par[i].str != 0)
 	{
-		par[i].size = ft_putnbr(par[i].size);
-		par[i].str = ft_putstr;
-		par[i].copy = ;
+		ft_putnbr(par[i].size);
+		ft_putstr(par[i].str);
+		ft_putstr(par[i].copy);
 		i++;
 	}
 }
