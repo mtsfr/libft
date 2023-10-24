@@ -6,7 +6,7 @@
 /*   By: mfaria-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 18:46:21 by mfaria-b          #+#    #+#             */
-/*   Updated: 2023/10/23 18:49:04 by mfaria-b         ###   ########.fr       */
+/*   Updated: 2023/10/24 18:27:00 by mfaria-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,6 @@ char	*ft_strdup(const char *s);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif

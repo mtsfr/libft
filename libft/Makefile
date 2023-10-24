@@ -28,7 +28,8 @@ FILES = ft_isalpha.c \
 	ft_strchr.c \
 	ft_strrchr.c \
 	ft_strlcat.c \
-	ft_putendl_fd.c
+	ft_putendl_fd.c \
+	ft_substr.c
 
 OBJ = $(FILES:.c=.o)
 
