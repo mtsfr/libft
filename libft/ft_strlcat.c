@@ -6,7 +6,7 @@
 /*   By: mfaria-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 17:18:06 by mfaria-b          #+#    #+#             */
-/*   Updated: 2023/10/23 19:11:23 by mfaria-b         ###   ########.fr       */
+/*   Updated: 2023/10/24 16:54:49 by mfaria-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	i = 0;
 	j = 0;
+	if (!size)
+		return (0);
 	while (dst[i] && i < size)
 	{	
 		i++;

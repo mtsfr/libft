@@ -30,18 +30,22 @@ FILES = ft_isalpha.c \
 	ft_strlcat.c \
 	ft_putendl_fd.c
 
-OBJS = $(FILES:.c=.o)
+OBJ = $(FILES:.c=.o)
 
-all: $(NAME) clean
+all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar -rcs $(NAME) $(OBJS)
+$(NAME): $(OBJ)
+	ar -rcs $(NAME) $(OBJ)
 
-$(OBJS): $(FILES)
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(FILES)
+	gcc -nostartfiles -shared -o libft.so $(OBJ)
+
+$(OBJ): $(FILES)
 	$(CC) $(CFLAGS) -c $(FILES)
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJ)
 
 fclean: clean
 	$(RM) $(NAME)
