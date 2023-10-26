@@ -32,7 +32,8 @@ FILES = ft_isalpha.c \
 	ft_substr.c \
 	ft_strjoin.c \
 	ft_strmapi.c \
-	ft_itoa.c
+	ft_itoa.c \
+	ft_strtrim.c
 
 OBJ = $(FILES:.c=.o)
 
