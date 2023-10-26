@@ -6,7 +6,7 @@
 /*   By: mfaria-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 16:24:00 by mfaria-b          #+#    #+#             */
-/*   Updated: 2023/10/26 18:45:34 by mfaria-b         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:01:44 by mfaria-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		i;
 	char	*str;
 
-	if(!s1 || !set)
+	if (!s1 || !set)
 		return (NULL);
 	i = 0;
 	start = 0;
