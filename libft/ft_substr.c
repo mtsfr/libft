@@ -6,7 +6,7 @@
 /*   By: mfaria-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 17:08:31 by mfaria-b          #+#    #+#             */
-/*   Updated: 2023/10/24 18:27:20 by mfaria-b         ###   ########.fr       */
+/*   Updated: 2023/10/31 18:52:35 by mfaria-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	if (ft_strlen(s) < start)
-	{	
+	{
 		new = (char *)malloc(sizeof(char) * 1);
 		if (!new)
 			return (NULL);

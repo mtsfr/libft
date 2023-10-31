@@ -6,14 +6,14 @@
 /*   By: mfaria-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 18:34:24 by mfaria-b          #+#    #+#             */
-/*   Updated: 2023/10/25 21:34:14 by mfaria-b         ###   ########.fr       */
+/*   Updated: 2023/10/31 18:53:12 by mfaria-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static size_t	nbrlen(int nbr)
-{	
+{
 	size_t	len;
 
 	len = 0;
@@ -40,7 +40,7 @@ static size_t	nbrlen(int nbr)
 }
 
 char	*ft_itoa(int n)
-{	
+{
 	char		*str;
 	size_t		len;
 	long int	num;

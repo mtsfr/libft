@@ -6,7 +6,7 @@
 /*   By: mfaria-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 16:32:11 by mfaria-b          #+#    #+#             */
-/*   Updated: 2023/10/23 16:32:51 by mfaria-b         ###   ########.fr       */
+/*   Updated: 2023/10/31 18:57:15 by mfaria-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (s[i])
 		i++;
 	while (i >= 0)
-	{	
+	{
 		if (s[i] == (char)c)
 			return ((char *)&s[i]);
 		i--;

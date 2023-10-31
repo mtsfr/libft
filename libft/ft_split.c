@@ -6,7 +6,7 @@
 /*   By: mfaria-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 18:57:40 by mfaria-b          #+#    #+#             */
-/*   Updated: 2023/10/30 21:33:02 by mfaria-b         ###   ########.fr       */
+/*   Updated: 2023/10/31 18:11:16 by mfaria-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static size_t	count_word(char const *s, char c)
 {
 	size_t	words;
 
-	if (!*s)
+	if (!s)
 		return (0);
 	words = 0;
 	while (*s)
@@ -31,26 +31,42 @@ static size_t	count_word(char const *s, char c)
 	return (words);
 }
 
+static void	count_alloc(char const *s, char c, char **mtz)
+{
+	size_t	letters;
+	size_t	i;
+
+	i = 0;
+	if (s)
+	{
+		letters = 0;
+		while (*s)
+		{
+			while (*s == c)
+				s++;
+			while (*s != c && *s)
+			{
+				s++;
+				letters++;
+			}
+			mtz[i++] = ft_substr((s - letters), 0, letters);
+			letters = 0;
+		}
+	}
+}
 
 char	**ft_split(char const *s, char c)
 {
-	char	**arr;
+	char	**mtz;
 	size_t	words;
 
-	words = count_word(s, c);
-	arr = (char **)malloc(sizeof(char *) * words + 1);
-	if (!arr)
+	if (!s)
 		return (NULL);
-	
-
-
+	words = count_word(s, c);
+	mtz = (char **)malloc(sizeof(char *) * words + 1);
+	if (!mtz)
+		return (NULL);
+	count_alloc(s, c, mtz);
+	mtz[words] = NULL;
 	return (mtz);
-}
-
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("%ld", count_word("Eu gosto de suc", ' '));
-	return 0;
 }

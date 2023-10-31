@@ -6,14 +6,14 @@
 /*   By: mfaria-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 16:17:33 by mfaria-b          #+#    #+#             */
-/*   Updated: 2023/10/23 16:21:55 by mfaria-b         ###   ########.fr       */
+/*   Updated: 2023/10/31 18:56:23 by mfaria-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
-{	
+{
 	size_t			i;
 	unsigned char	*ptr;
 

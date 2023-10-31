@@ -6,7 +6,7 @@
 /*   By: mfaria-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 16:26:54 by mfaria-b          #+#    #+#             */
-/*   Updated: 2023/10/24 16:59:43 by mfaria-b         ###   ########.fr       */
+/*   Updated: 2023/10/31 18:48:26 by mfaria-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if (d > s)
 	{
 		while (n > 0)
-		{	
+		{
 			n--;
 			d[n] = s[n];
 		}
