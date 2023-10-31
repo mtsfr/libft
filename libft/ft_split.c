@@ -6,7 +6,7 @@
 /*   By: mfaria-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 18:57:40 by mfaria-b          #+#    #+#             */
-/*   Updated: 2023/10/31 18:11:16 by mfaria-b         ###   ########.fr       */
+/*   Updated: 2023/10/31 19:49:56 by mfaria-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,15 @@ static void	count_alloc(char const *s, char c, char **mtz)
 		letters = 0;
 		while (*s)
 		{
-			while (*s == c)
+			while (*s == c && *s)
 				s++;
 			while (*s != c && *s)
 			{
 				s++;
 				letters++;
 			}
-			mtz[i++] = ft_substr((s - letters), 0, letters);
+			mtz[i] = ft_substr((s - letters), 0, letters);
+			i++;
 			letters = 0;
 		}
 	}
@@ -63,7 +64,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	words = count_word(s, c);
-	mtz = (char **)malloc(sizeof(char *) * words + 1);
+	mtz = (char **)malloc(sizeof(char *) * (words + 1));
 	if (!mtz)
 		return (NULL);
 	count_alloc(s, c, mtz);
