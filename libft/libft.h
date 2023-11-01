@@ -6,14 +6,12 @@
 /*   By: mfaria-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 18:46:21 by mfaria-b          #+#    #+#             */
-/*   Updated: 2023/10/31 18:04:18 by mfaria-b         ###   ########.fr       */
+/*   Updated: 2023/11/01 19:39:50 by mfaria-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
-# include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
 
